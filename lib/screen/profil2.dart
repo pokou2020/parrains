@@ -136,7 +136,11 @@ child: Container(
                                  Row(
                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                    children: [
-                                     Container(
+                                     InkWell(
+                                       onTap: (){
+                                         Navigator.of(context).pushNamed("demandeRdv");
+                                       },
+                                       child: Container(
                
                height: 40,
                 width: 100,
@@ -155,17 +159,20 @@ child: Container(
                      topRight: Radius.circular(30),
                  )
                ),
-               
-
              ),
-                  Container(
+                                     ),
+                  InkWell(
+                    onTap: (){
+                      Navigator.of(context).pushNamed("historique");
+                    },
+                    child: Container(
                
                height: 40,
                 width: 100,
                child: Center(
                  child: Text("Historiques",
                  style: TextStyle(
-                   color: Colors.white
+                     color: Colors.white
                  ),
                  ),
 
@@ -173,12 +180,13 @@ child: Container(
                decoration: BoxDecoration(
                  color: Colors.greenAccent,
                  borderRadius: BorderRadius.only(
-                   bottomLeft: Radius.circular(30),
-                     topLeft: Radius.circular(30),
+                     bottomLeft: Radius.circular(30),
+                       topLeft: Radius.circular(30),
                  )
                ),
 
-             )
+             ),
+                  )
                                    ],
                                  )
     ],

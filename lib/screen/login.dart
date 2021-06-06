@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+   
+  @override
+  _LoginState createState() => _LoginState();
+
+}
+
+class _LoginState extends State<Login> {
+  bool checkvalue=false;
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +31,7 @@ class Login extends StatelessWidget {
       ),
  
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Container(
            height: 100,
@@ -40,7 +49,7 @@ class Login extends StatelessWidget {
           ),
           ),
         ),
-         SizedBox(height: 40,),
+        
         Container(
           width: MediaQuery.of(context).size. width/1.2,
           height: 50,
@@ -69,7 +78,7 @@ class Login extends StatelessWidget {
               ),
           ),
         ),
-       SizedBox(height: 20,),
+    
       Container(
         width: MediaQuery.of(context).size. width/1.2,
         height: 50,
@@ -93,12 +102,12 @@ class Login extends StatelessWidget {
           decoration: InputDecoration(
             border: InputBorder.none,
             contentPadding: EdgeInsets.only(top:14),
-            prefixIcon: Icon(Icons.panorama_fisheye_sharp),
+            prefixIcon: Icon(Icons.visibility),
             hintText: "Mot de passe"
             ),
         ),
       ),
-      SizedBox(height: 40,),
+ 
       Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -107,29 +116,26 @@ class Login extends StatelessWidget {
              Container(
                child: Row(
                  children: [
+            
                    Padding(
                      padding: const EdgeInsets.all(2),
-                     child: Container(
-                       height: 10,
-                       width: 10,
-                       decoration: BoxDecoration(
-                         border: Border.all(
-                           color: Colors.black,
-                           width: 1
-                         ),
-                       ),
+                     child: Checkbox(
 
-                     ),
+                       value: checkvalue, onChanged: (bool value){
+                       setState(() {
+                         checkvalue=value;
+                       });
+                     },
+                     activeColor: Colors.greenAccent,
+                     checkColor: Colors.white,
+ 
+                     )
                    ),
-                   Padding(
-                     padding: const EdgeInsets.all(2),
-                     child: Container(
-                       child: Text("Rester connectez"),
-                     ),
-                   )
+                   Text("Restez connecter")
                  ],
                ),
              ),
+
              Container(
                
                height: 40,
@@ -154,7 +160,7 @@ class Login extends StatelessWidget {
            ],
         ),
       ),
-        SizedBox(height: 40,),
+       
       InkWell(
          onTap: () {
            Navigator.pushNamed(context, 'formulaire');
@@ -176,3 +182,4 @@ class Login extends StatelessWidget {
     );
   }
 }
+

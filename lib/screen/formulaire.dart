@@ -11,7 +11,7 @@ class _FormulaireState extends State<Formulaire> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height,
+          //height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -28,9 +28,9 @@ class _FormulaireState extends State<Formulaire> {
       ),
           child: Column(
           
-            // mainAxisAlignment: MainAxisAlignment.start,
+             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              SizedBox(height: 40,),
+              
                     Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -62,12 +62,13 @@ class _FormulaireState extends State<Formulaire> {
                   SizedBox(width: 30,),
                   Container(
                     
-                    child: Text("Age"),
+                    child: Text("Nom"),
                   ),
                 ],
               ),
-                Container(
-                  alignment: Alignment.center,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
         width: MediaQuery.of(context).size. width/1.2,
         height: 50,
         decoration: BoxDecoration(
@@ -81,31 +82,29 @@ class _FormulaireState extends State<Formulaire> {
             )
           ]
         ),
-        child: TextField(
-          obscureText: true,
-          style: TextStyle(
-            color: Colors.black,
-
-          ),
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top:14),
-            //prefixIcon: Icon(Icons.search_off),
-           // hintText: "Mot de passe"
+        child:TextField(
+            decoration: InputDecoration(
+            hintText: 'Nom',
+         filled: true,
+          border: InputBorder.none,
             ),
-        ),
+            style: TextStyle(color: Colors.black),
+          ),
       ),
-         SizedBox(height: 5,),
+                ),
+        
       Row(
         children: [
         SizedBox(width: 30,),
         Container(
-                    child: Text("Nom"),
+                    child: Text("Age"),
                   ),
         ],
       ),
-               SizedBox(height: 3,),
-                Container(
+               
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
         width: MediaQuery.of(context).size. width/1.2,
         height: 50,
         decoration: BoxDecoration(
@@ -119,21 +118,16 @@ class _FormulaireState extends State<Formulaire> {
             )
           ]
         ),
-        child: TextField(
-          obscureText: true,
-          style: TextStyle(
-            color: Colors.black,
-
-          ),
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top:14),
-           // prefixIcon: Icon(Icons.search_off),
-           // hintText: "Mot de passe"
+        child:TextField(
+            decoration: InputDecoration(
+            hintText: 'Age',
+         filled: true,
+          border: InputBorder.none,
             ),
-        ),
+            style: TextStyle(color: Colors.black),
+          ),
       ),
-      SizedBox(height: 5,),
+                ),
       Row(
         children: [
         SizedBox(width: 30,),
@@ -142,7 +136,9 @@ class _FormulaireState extends State<Formulaire> {
                   ),
         ],
       ),
-                Container(
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
         width: MediaQuery.of(context).size. width/1.2,
         height: 50,
         decoration: BoxDecoration(
@@ -157,19 +153,15 @@ class _FormulaireState extends State<Formulaire> {
           ]
         ),
         child: TextField(
-          obscureText: true,
-          style: TextStyle(
-            color: Colors.black,
-
-          ),
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top:14),
-           // prefixIcon: Icon(Icons.search_off),
-           // hintText: "Mot de passe"
+            decoration: InputDecoration(
+            hintText: 'Domicile',
+         filled: true,
+          border: InputBorder.none,
             ),
-        ),
+            style: TextStyle(color: Colors.black),
+          ),
       ),
+                ),
           SizedBox(height: 5,),
       Row(
         children: [
@@ -179,8 +171,10 @@ class _FormulaireState extends State<Formulaire> {
                   ),
         ],
       ),
-               SizedBox(height: 3,),
-                Container(
+         
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
         width: MediaQuery.of(context).size. width/1.2,
         height: 50,
         decoration: BoxDecoration(
@@ -195,19 +189,15 @@ class _FormulaireState extends State<Formulaire> {
           ]
         ),
         child: TextField(
-          obscureText: true,
-          style: TextStyle(
-            color: Colors.black,
-
-          ),
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top:14),
-           // prefixIcon: Icon(Icons.search_off),
-           // hintText: "Mot de passe"
+            decoration: InputDecoration(
+            hintText: 'Groupe sanguin',
+         filled: true,
+          border: InputBorder.none,
             ),
-        ),
+            style: TextStyle(color: Colors.black),
+          ),
       ),
+                ),
       SizedBox(height: 5,),
       Row(
         children: [
@@ -218,8 +208,10 @@ class _FormulaireState extends State<Formulaire> {
                   ),
         ],
       ),
-               SizedBox(height: 3,),
-                Container(
+             
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
         width: MediaQuery.of(context).size. width/1.2,
         height: 50,
         decoration: BoxDecoration(
@@ -234,19 +226,15 @@ class _FormulaireState extends State<Formulaire> {
           ]
         ),
         child: TextField(
-          obscureText: true,
-          style: TextStyle(
-            color: Colors.black,
-
-          ),
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top:14),
-            //prefixIcon: Icon(Icons.search_off),
-           // hintText: "Mot de passe"
+            decoration: InputDecoration(
+            hintText: 'Email',
+         filled: true,
+          border: InputBorder.none,
             ),
-        ),
+            style: TextStyle(color: Colors.black),
+          ),
       ),
+                ),
       SizedBox(height: 5,),
       Row(
         children: [
@@ -256,8 +244,10 @@ class _FormulaireState extends State<Formulaire> {
                   ),
         ],
       ),
-               SizedBox(height: 3,),
-                Container(
+              
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
         width: MediaQuery.of(context).size. width/1.2,
         height: 50,
         decoration: BoxDecoration(
@@ -272,19 +262,15 @@ class _FormulaireState extends State<Formulaire> {
           ]
         ),
         child: TextField(
-          obscureText: true,
-          style: TextStyle(
-            color: Colors.black,
-
-          ),
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top:14),
-            //prefixIcon: Icon(Icons.search_off),
-           // hintText: "Mot de passe"
+            decoration: InputDecoration(
+            hintText: 'Statut',
+         filled: true,
+          border: InputBorder.none,
             ),
-        ),
+            style: TextStyle(color: Colors.black),
+          ),
       ),
+                ),
       SizedBox(height: 5,),
       Row(
         children: [
@@ -294,8 +280,10 @@ class _FormulaireState extends State<Formulaire> {
                   ),
         ],
       ),
-               SizedBox(height: 3,),
-                Container(
+              
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
         width: MediaQuery.of(context).size. width/1.2,
         height: 50,
         decoration: BoxDecoration(
@@ -310,19 +298,15 @@ class _FormulaireState extends State<Formulaire> {
           ]
         ),
         child: TextField(
-          obscureText: true,
-          style: TextStyle(
-            color: Colors.black,
-
-          ),
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top:14),
-            //prefixIcon: Icon(Icons.search_off),
-           // hintText: "Mot de passe"
+            decoration: InputDecoration(
+            hintText: 'Votre hopital frequent',
+         filled: true,
+          border: InputBorder.none,
             ),
-        ),
+            style: TextStyle(color: Colors.black),
+          ),
       ),
+                ),
             ],
           ),
         ),
